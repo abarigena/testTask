@@ -45,6 +45,7 @@ public class RabbitReceiver {
             productService.addNewProduct(product);
 
             channel.basicAck(tag, false);
+            logger.info("Сообщение успешно подтверждено: id = {}", product.getId());
         } catch (Exception e) {
             logger.error("Ошибка при обработке сообщения: id = {}, name = {}, Price = {}, Timestamp = {}. Ошибка: {}",
                     product.getId(), product.getName(), product.getPrice(), product.getTimestamp(), e.getMessage(), e);
