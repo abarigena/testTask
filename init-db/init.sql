@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS products (
+    id INT PRIMARY KEY,
+    name VARCHAR NOT NULL,
+    price DECIMAL NOT NULL,
+    timestamp TIMESTAMP NOT NULL
+);
