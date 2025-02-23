@@ -33,7 +33,7 @@ public class RabbitReceiver {
      *
      * @param product Объект продукта, полученный из сообщения.
      * @param channel Канал RabbitMQ для подтверждения обработки сообщения.
-     * @param tag Тег доставки сообщения.
+     * @param tag     Тег доставки сообщения.
      * @throws IOException Если произошла ошибка при работе с каналом.
      */
     @RabbitListener(queues = {"Product.queue"}, containerFactory = "rabbitListenerContainerFactory")

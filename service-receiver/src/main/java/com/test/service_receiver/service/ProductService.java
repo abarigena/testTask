@@ -29,7 +29,7 @@ public class ProductService {
      * @param productDTO Объект продукта для добавления.
      */
     public void addNewProduct(ProductDTO productDTO) {
-        try{
+        try {
             logger.info("Сохранение продукта: id = {}, name = {}, price = {}, timestamp = {}",
                     productDTO.getId(), productDTO.getName(), productDTO.getPrice(), productDTO.getTimestamp());
 

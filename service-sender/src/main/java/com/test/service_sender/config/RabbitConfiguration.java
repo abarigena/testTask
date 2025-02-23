@@ -115,9 +115,9 @@ public class RabbitConfiguration {
 
         // Обработка подтверждений доставки
         rabbitTemplate.setConfirmCallback((correlationData, ack, cause) -> {
-            if(ack){
+            if (ack) {
                 logger.info("Сообщение успешно доставлено в очередь");
-            } else{
+            } else {
                 logger.info("Доставка сообщения в очередь не удалась: {}", cause);
             }
         });
